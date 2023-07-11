@@ -1,0 +1,28 @@
+#tocmat服务器配置
+server:
+  port: 8080
+  servlet:
+    context-path: /   #工程路径
+
+#自定义配置数据
+boot:
+  root: D:/upload
+  mydouble: 22.3
+  mydate: 2022/12/22 22:22:22
+  mystrList: [abc,def]
+  mystrList2:
+    - x
+    - y
+    - last dance
+  mymap: {a: 1,b: 2,c: 3}
+  loginToken:
+    loginTokenKey: asdfasdf12312dsafg
+    loginTokenExpMinutes: 30
+  myCors:
+    path: /**
+    allowedOrigins: [http://localhost:8088]
+    allowedHeaders: []
+    allowedMethods: [GET,POST,PUT,DELETE,OPTIONS]
+    allowCredentials: true
+    maxAge: 30
+    exposedHeaders: [admin_token]
