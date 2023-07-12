@@ -1,4 +1,4 @@
-package com.javasm.domain;
+package com.javasm.entity;
 
 import lombok.Data;
 

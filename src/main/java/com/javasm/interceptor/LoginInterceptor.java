@@ -22,19 +22,19 @@ public class LoginInterceptor implements HandlerInterceptor {
     // return false 拦截下来,不再执行目标方法
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("preHandle");
+        System.out.println("拦截器一，preHandle");
         return true;
     }
 
     // 在目标方法执行之后执行
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        System.out.println("postHandle");
+        System.out.println("拦截器一，postHandle");
     }
 
     // 在响应即将完成时执行
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        System.out.println("afterCompletion");
+        System.out.println("拦截器一，afterCompletion");
     }
 }

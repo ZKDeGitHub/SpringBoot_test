@@ -26,3 +26,26 @@ boot:
     allowCredentials: true
     maxAge: 30
     exposedHeaders: [admin_token]
+
+#    数据库连接池的配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_mybatis?serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    # 连接池的类型为druid
+    type: com.alibaba.druid.pool.DruidDataSource
+    # druid的一些参数配置
+    druid:
+      initial-size: 5
+      max-active: 100
+      min-idle: 10
+# mybatis的配置
+mybatis:
+  # mybatis实体类的包的配置
+  type-aliases-package: com.javasm.entity
+  configuration:
+    # 设置支持驼峰标志
+    map-underscore-to-camel-case: true
+  # mapper接口的路径配置再启动类中

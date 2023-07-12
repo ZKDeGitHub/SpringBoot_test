@@ -16,6 +16,7 @@ import javax.annotation.Resource;
  * @since: 11
  * @Date 2023/7/11 20:54
  * @description: WebMvcConfigurer的实现类，此处重写拦截器配置，配置要拦截的和不拦截的路径
+ * 跨域问题解决方案二：定义类,实现WebMvcConfigurer接口,重写addCorsMapping方法
  */
 
 @Configuration
